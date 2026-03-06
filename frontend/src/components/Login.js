@@ -20,11 +20,11 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('https://login-backend-luuv.onrender.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch('https://login-backend-luuv.onrender.com/login', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ username, password }),
+});
 
       const data = await response.json();
 
